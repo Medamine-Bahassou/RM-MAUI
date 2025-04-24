@@ -1,0 +1,139 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             xmlns:model="clr-namespace:newRestaurant.Models"
+             x:Class="newRestaurant.Views.CartPage"
+             x:DataType="vm:CartViewModel"
+             Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <Color x:Key="PrimaryColor">#FF5722</Color>
+        <Color x:Key="SecondaryColor">#FFB74D</Color>
+        <Color x:Key="TextColor">#333333</Color>
+        <x:Double x:Key="SmallSpacing">5</x:Double>
+        <x:Double x:Key="MediumSpacing">10</x:Double>
+        <x:Double x:Key="LargeSpacing">15</x:Double>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="*, Auto, Auto">
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="Fill" VerticalOptions="Center"
+                           Color="{StaticResource PrimaryColor}"
+                           Grid.RowSpan="3" ZIndex="1"/>
+
+        <CollectionView ItemsSource="{Binding CartItems}"
+                        Grid.Row="0"
+                        Margin="{StaticResource MediumSpacing}"
+                        SelectionMode="None">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="{StaticResource SmallSpacing}" Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:CartPlat">
+                    <Border Stroke="{DynamicResource App.Resources.BorderColor}"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 5"
+                            Padding="{StaticResource MediumSpacing}"
+                            Margin="0">
+                        <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto, Auto"
+                              RowSpacing="{StaticResource SmallSpacing}">
+
+                            <Label Text="{Binding Plat.Name}"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   TextColor="{StaticResource TextColor}"
+                                   Grid.Column="0" Grid.Row="0"/>
+
+                            <Label Grid.Column="0" Grid.Row="1"
+                                   FontSize="Small"
+                                   TextColor="{StaticResource TextColor}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Plat.Price, StringFormat='{0:C}'}" FontAttributes="Bold"/>
+                                        <Span Text=" x "/>
+                                        <Span Text="{Binding Quantity}"/>
+                                        <Span Text=" = "/>
+                                        <Span Text="{Binding TotalLinePrice, StringFormat='{0:C}'}" FontAttributes="Bold" TextColor="{StaticResource PrimaryColor}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <HorizontalStackLayout Grid.Column="1" Grid.RowSpan="2"
+                                                 VerticalOptions="Center" HorizontalOptions="End"
+                                                 Spacing="{StaticResource SmallSpacing}">
+
+                                <Button Text="-"
+                                        FontSize="Medium"
+                                        Padding="0"
+                                        CornerRadius="20"
+                                        HeightRequest="40"
+                                        WidthRequest="40"
+                                        TextColor="White"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CartViewModel}}, Path=DecreaseQuantityCommand}"
+                                        CommandParameter="{Binding .}"/>
+
+                                <Label Text="{Binding Quantity}"
+                                       VerticalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       FontSize="Medium"
+                                       TextColor="{StaticResource TextColor}"
+                                       WidthRequest="30"/>
+
+                                <Button Text="+"
+                                        FontSize="Medium"
+                                        Padding="0"
+                                        CornerRadius="20"
+                                        HeightRequest="40"
+                                        WidthRequest="40"
+                                        TextColor="White"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:CartViewModel}}, Path=IncreaseQuantityCommand}"
+                                        CommandParameter="{Binding .}"/>
+                            </HorizontalStackLayout>
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout Padding="50" Spacing="{StaticResource MediumSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="🛒" FontSize="50" HorizontalTextAlignment="Center"/>
+                    <Label Text="Your cart is empty." HorizontalOptions="Center" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource TextColor}"/>
+                    <Label Text="Add some delicious dishes from the menu!" HorizontalOptions="Center" TextColor="Gray" FontSize="Small"/>
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+
+        <Border Grid.Row="1"
+                Stroke="{DynamicResource App.Resources.BorderColor}"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 5"
+                Padding="{StaticResource LargeSpacing}"
+                Margin="{StaticResource MediumSpacing}">
+            <HorizontalStackLayout HorizontalOptions="End" Spacing="{StaticResource SmallSpacing}">
+                <Label Text="Total:" FontSize="Large" VerticalOptions="Center" TextColor="{StaticResource TextColor}"/>
+                <Label Text="{Binding TotalPrice, StringFormat=' {0:C}'}"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource PrimaryColor}"/>
+            </HorizontalStackLayout>
+        </Border>
+
+        <Button Text="Checkout"
+                Grid.Row="2"
+                Command="{Binding CheckoutCommand}"
+                IsEnabled="{Binding HasItems}"
+                FontSize="Large"
+                Margin="{StaticResource MediumSpacing}"
+                HeightRequest="55"
+                CornerRadius="8"
+                BackgroundColor="{StaticResource PrimaryColor}"
+                TextColor="White"/>
+
+    </Grid>
+</ContentPage>

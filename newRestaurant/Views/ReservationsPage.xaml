@@ -1,0 +1,102 @@
+﻿<!-- Views/ReservationsPage.xaml -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             xmlns:model="clr-namespace:newRestaurant.Models"
+             x:Class="newRestaurant.Views.ReservationsPage"
+             x:DataType="vm:ReservationsViewModel"
+             Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <!-- Reusing colors and spacing defined previously -->
+        <!-- Ideally these would be in App.xaml -->
+        <Color x:Key="PrimaryColor">#FF5722</Color>
+        <Color x:Key="SecondaryColor">#FFB74D</Color>
+        <Color x:Key="TextColor">#333333</Color>
+        <!-- BackgroundColor and BorderColor are now expected from App.xaml -->
+        <x:Double x:Key="SmallSpacing">5</x:Double>
+        <x:Double x:Key="MediumSpacing">10</x:Double>
+        <x:Double x:Key="LargeSpacing">15</x:Double>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto, *, Auto">
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           Color="{StaticResource PrimaryColor}"
+                           HorizontalOptions="Fill" VerticalOptions="Center"
+                           Grid.RowSpan="3" ZIndex="1"/>
+
+        <CollectionView ItemsSource="{Binding Reservations}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedReservation, Mode=TwoWay}"
+                        SelectionChangedCommand="{Binding GoToReservationDetailCommand}"
+                        Grid.Row="1"
+                        Margin="{StaticResource MediumSpacing}">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="{StaticResource SmallSpacing}" Orientation="Vertical"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Reservation">
+                    <Border Stroke="{DynamicResource App.Resources.BorderColor}"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 5"
+                            Padding="{StaticResource MediumSpacing}"
+                            Margin="0"
+                            BackgroundColor="{DynamicResource App.Resources.BackgroundColor}">
+                        <VerticalStackLayout Spacing="{StaticResource SmallSpacing}">
+                            <Label FontSize="Medium" TextColor="{StaticResource TextColor}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Table: " FontAttributes="Bold"/>
+                                        <Span Text="{Binding Table.TableNumber}"/>
+                                        <Span Text=" ("/>
+                                        <Span Text="{Binding Status}" FontAttributes="Bold"/>
+                                        <Span Text=")"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Text="{Binding TimeStart, StringFormat='Start: {0:g}'}"
+                                   FontSize="Small"
+                                   TextColor="{StaticResource TextColor}"/>
+                            <Label Text="{Binding TimeEnd, StringFormat='End:   {0:g}'}"
+                                   FontSize="Small"
+                                   TextColor="{StaticResource TextColor}"/>
+                            <!-- Only show Username if Staff/Admin is viewing -->
+                            <!-- Use a system gray or standard gray for text -->
+                            <Label Text="{Binding User.Username, StringFormat='User: {0}'}"
+                                   FontSize="Small"
+                                   TextColor="{DynamicResource SystemGrayTextColor}"
+                                   IsVisible="{Binding Source={RelativeSource AncestorType={x:Type vm:ReservationsViewModel}}, Path=IsStaffOrAdmin}"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout Padding="50" Spacing="{StaticResource MediumSpacing}" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="📄" FontSize="50" HorizontalTextAlignment="Center"/>
+                    <!-- Reservation-related emoji -->
+                    <Label Text="No reservations found."
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource TextColor}"/>
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+
+        <Button Text="Add New Reservation"
+                Command="{Binding AddReservationCommand}"
+                Grid.Row="2"
+                FontSize="Large"
+                Margin="{StaticResource MediumSpacing}"
+                HeightRequest="55"
+                CornerRadius="8"
+                BackgroundColor="{StaticResource PrimaryColor}"
+                TextColor="White"/>
+    </Grid>
+</ContentPage>

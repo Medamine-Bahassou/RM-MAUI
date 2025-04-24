@@ -1,0 +1,92 @@
+<!-- Views/PlatDetailPage.xaml -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             xmlns:model="clr-namespace:newRestaurant.Models"
+             x:Class="newRestaurant.Views.PlatDetailPage"
+             x:DataType="vm:PlatDetailViewModel"
+             Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <!-- Add or ensure these resources are available -->
+        <Color x:Key="RedColor">#F44336</Color>
+        <!-- Standard Material Red -->
+        <!-- Assume standard spacing resources exist -->
+        <x:Double x:Key="MediumSpacing">10</x:Double>
+        <x:Double x:Key="LargeSpacing">15</x:Double>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <!-- Add Margin/Padding to the main layout -->
+        <VerticalStackLayout Spacing="{StaticResource MediumSpacing}" Padding="{StaticResource LargeSpacing}">
+
+            <ActivityIndicator IsVisible="{Binding IsBusy}"
+                               IsRunning="{Binding IsBusy}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                                />
+            <!-- Assuming PrimaryColor is defined elsewhere -->
+
+            <Label Text="Dish Name:"/>
+            <!-- *** MODIFIED: Bind IsEnabled to CanManagePlats *** -->
+            <Entry Text="{Binding PlatName}"
+                   Placeholder="Enter dish name"
+                   IsEnabled="{Binding CanManagePlats}"
+                   />
+
+            <Label Text="Description:"/>
+            <!-- *** MODIFIED: Bind IsEnabled to CanManagePlats *** -->
+            <Editor Text="{Binding PlatDescription}"
+                    Placeholder="Enter description (optional)"
+                    HeightRequest="100"
+                    IsEnabled="{Binding CanManagePlats}"
+                   />
+
+            <Label Text="Price:"/>
+            <!-- *** MODIFIED: Bind IsEnabled to CanManagePlats *** -->
+            <Entry Text="{Binding PlatPrice, StringFormat='{0:N2}'}"
+                   Keyboard="Numeric"
+                   Placeholder="Enter price"
+                   IsEnabled="{Binding CanManagePlats}"
+                   />
+
+            <Label Text="Category:"/>
+            <!-- *** MODIFIED: Bind IsEnabled to CanManagePlats *** -->
+            <Picker ItemsSource="{Binding Categories}"
+                    SelectedItem="{Binding SelectedCategory}"
+                    ItemDisplayBinding="{Binding Name}"
+                    Title="Select a Category"
+                    IsEnabled="{Binding CanManagePlats}"
+                    />
+
+            <!-- *** MODIFIED: Bind IsVisible to CanManagePlats *** -->
+            <!-- Button will also be disabled by Command.CanExecute when IsBusy -->
+            <Button Text="Save Dish"
+                    Command="{Binding SavePlatCommand}"
+                    IsVisible="{Binding CanManagePlats}"
+                    
+                    TextColor="White"/>
+
+            <!-- *** MODIFIED: Bind IsVisible to CanManagePlats *** -->
+            <!-- Also bind IsEnabled to IsExistingPlat, as you can't delete a new item -->
+            <!-- Button will also be disabled by Command.CanExecute when IsBusy or permission changes -->
+            <Button Text="Delete Dish"
+                    Command="{Binding DeletePlatCommand}"
+                    IsVisible="{Binding CanManagePlats}"
+                    IsEnabled="{Binding IsExistingPlat}"
+                    BackgroundColor="{StaticResource RedColor}"
+                    TextColor="White"
+                    />
+
+            <!-- Cancel button always visible, disabled when busy -->
+            <Button Text="Cancel"
+                    Command="{Binding GoBackCommand}"
+                    IsEnabled="{Binding IsNotBusy}"  />
+            <!-- Assuming IsNotBusy property in BaseViewModel -->
+            <!-- If no IsNotBusy, you might bind to !IsBusy -->
+            <!-- IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}" -->
+            <!-- Requires an InverseBooleanConverter -->
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

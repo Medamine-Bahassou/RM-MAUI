@@ -1,0 +1,168 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\RM-MAUI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\ReservationDetailViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\PlatDetailViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\PlatsPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\RegisterViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlatDetailPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml",
+              "RelativeDocumentMoniker": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml",
+              "ToolTip": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml",
+              "RelativeToolTip": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\PlatDetailPage.xaml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAowE4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-24T10:28:23.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlatsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\PlatsPage.xaml",
+              "RelativeDocumentMoniker": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\PlatsPage.xaml",
+              "ToolTip": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\PlatsPage.xaml",
+              "RelativeToolTip": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\PlatsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-24T10:28:21.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlatDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\PlatDetailViewModel.cs",
+              "RelativeDocumentMoniker": "..\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\PlatDetailViewModel.cs",
+              "ToolTip": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\PlatDetailViewModel.cs",
+              "RelativeToolTip": "..\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\PlatDetailViewModel.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T10:27:58.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReservationDetailViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
+              "RelativeDocumentMoniker": "..\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
+              "ToolTip": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
+              "RelativeToolTip": "..\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\ReservationDetailViewModel.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T10:14:58.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReservationsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml",
+              "RelativeDocumentMoniker": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml",
+              "ToolTip": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml",
+              "RelativeToolTip": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\ReservationsPage.xaml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAswGUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-24T10:06:11.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReservationDetailPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml",
+              "RelativeDocumentMoniker": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml",
+              "ToolTip": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml",
+              "RelativeToolTip": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\ReservationDetailPage.xaml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowB0AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-24T10:06:09.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CartPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml.cs",
+              "RelativeDocumentMoniker": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml.cs",
+              "RelativeToolTip": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:52:15.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CartPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml",
+              "RelativeDocumentMoniker": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml",
+              "ToolTip": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml",
+              "RelativeToolTip": "..\\newRestaurant\\newRestaurant\\newRestaurant\\Views\\CartPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-24T09:51:38.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "..\\newRestaurant\\newRestaurant\\newRestaurant\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ToolTip": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeToolTip": "..\\newRestaurant\\newRestaurant\\newRestaurant\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAtwEYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:49:14.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "..\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\Mohamed Amine\\Desktop\\Git\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "..\\newRestaurant\\newRestaurant\\newRestaurant\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAtwF4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T09:40:36.99Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

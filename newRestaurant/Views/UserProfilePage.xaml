@@ -1,0 +1,49 @@
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:newRestaurant.ViewModels"
+             x:Class="newRestaurant.Views.UserProfilePage"
+             x:DataType="vm:UserProfileViewModel"
+             Title="{Binding Title}">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="30">
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" HorizontalOptions="Fill"/>
+
+            <Label Text="My Profile" FontSize="Header" HorizontalOptions="Center"/>
+
+            <Label Text="Username:"/>
+            <Entry Text="{Binding Username, Mode=TwoWay}" Placeholder="Enter username"/>
+
+            <Label Text="Email:"/>
+            <Entry Text="{Binding Email, Mode=TwoWay}" Placeholder="Enter email" Keyboard="Email"/>
+
+            <Label Text="Role:"/>
+            <Label Text="{Binding UserRoleDisplay}" FontSize="Medium" TextColor="Gray"/>
+
+            <!-- Save Button -->
+            <Button Text="Save Changes"
+                    Command="{Binding SaveProfileCommand}"
+                    IsEnabled="{Binding IsNotBusy}"
+                Margin="0,20,0,0"/>
+
+                <!-- Logout Button -->
+                <Button Text="Logout"
+                    Command="{Binding LogoutCommand}"
+                    IsEnabled="{Binding IsNotBusy}"
+                    BackgroundColor="Red" TextColor="White"
+                    Margin="0,10,0,0"/>
+
+                <!-- Error Message Display -->
+                <Label Text="{Binding ErrorMessage}"
+                   TextColor="Red"
+                   IsVisible="{Binding HasError}"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,0"/>
+
+               
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
