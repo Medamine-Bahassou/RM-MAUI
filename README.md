@@ -117,5 +117,3 @@ For questions or feedback, please open an issue on this GitHub repository or con
 
 *   GitHub: [Medamine-Bahassou](https://github.com/Medamine-Bahassou)
 
----
-© [Year, e.g., 2024] Medamine Bahassou. All rights reserved.
